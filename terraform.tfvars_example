@@ -1,0 +1,17 @@
+# Spectro Cloud credentials
+sc_host         = "api.spectrocloud.com" 
+#sc_username     = "{enter Spectro Cloud username}"     #e.g: user1@abc.com
+#sc_password     = "{enter Spectro Cloud password}"     #e.g: supereSecure1!
+sc_project_name = "Default" #e.g.: yourProjectName
+
+
+cluster_cloud_account_name   = "nameOfExistingCloudAccount"
+cluster_cluster_profile_name = "nameOfExistingClusterProfile"
+cluster_name                 = "yourclusternamelowercase"
+ssh_key_name                 = "yourSSHkey"
+region                       = "us-east-1"
+region_azs                   = [
+  "us-east-1a",
+  "us-east-1b",                             
+]
+
