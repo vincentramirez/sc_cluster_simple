@@ -7,7 +7,7 @@ sc_project_name = "Default or yourProjectName"
 
 cluster_cloud_account_name   = "nameOfExistingCloudAccount"
 cluster_cluster_profile_name = "nameOfExistingClusterProfile"
-cluster_name                 = "yourclusternamelowercase"
+cluster_name                 = "yourclusternamelowercaseanddashesallowed"
 ssh_key_name                 = "yourSSHkey"
 region                       = "us-east-1"
 region_azs                   = [
