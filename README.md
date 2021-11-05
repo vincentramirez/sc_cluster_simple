@@ -6,9 +6,9 @@
 - A Cluster Profile for the cloud environment you will be deploying into Ex: AWS, GCP, VMware, et.
 
 ### Usage
-- Clone this repo
-- cd sc_cluster_simple
-- cp terraform.tfvars_example ./terraform.tfvars
+- Clone this repo `git clone https://github.com/vincentramirez/sc_cluster_simple.git`
+- `cd sc_cluster_simple`
+- `cp terraform.tfvars_example ./terraform.tfvars`
 - Type `vi terraform.tfvars`, `i` (for insert mode) <enter your unique values>, `esc :wq! enter` (to save) 
 - *It is not a safe practice to put passwords or secrets in a .tfvars file
 - For the sc_username & sc_password use 
