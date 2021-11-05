@@ -1,5 +1,5 @@
 # Spectro Cloud credentials
-sc_host         = "api.spectrocloud.com" 
+sc_host         = "api.spectrocloud.com for SaaS trials, or your custom tenant url" 
 #sc_username     = "use_TF_VAR_ or anything besides hardcoding"     
 #sc_password     = "use_TF_VAR_ or anything besides hardcoding"    
 sc_project_name = "Default or yourProjectName" 
