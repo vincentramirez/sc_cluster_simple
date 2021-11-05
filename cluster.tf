@@ -22,36 +22,37 @@ resource "spectrocloud_cluster_aws" "cluster" {
   cloud_account_id = data.spectrocloud_cloudaccount_aws.account.id
 
   cloud_config {
-    ssh_key_name = "default"
-    region       = "us-west-2"
+    ssh_key_name = var.ssh_key_name
+    region       = var.region
   }
 
   cluster_profile {
     id = data.spectrocloud_cluster_profile.profile.id
 
-    # To override or specify values for a cluster:
-
-    # pack {
-    #   name   = "spectro-byo-manifest"
-    #   tag    = "1.0.x"
-    #   values = <<-EOT
-    #     manifests:
-    #       byo-manifest:
-    #         contents: |
-    #           # Add manifests here
-    #           apiVersion: v1
-    #           kind: Namespace
-    #           metadata:
-    #             labels:
-    #               app: wordpress
-    #               app2: wordpress2
-    #             name: wordpress
-    #   EOT
-    # }
-  }
-
+  # To override or specify values for a cluster:
 /*
-
+  pack {
+  name   = "spectro-byo-manifest"
+  tag    = "1.0.x"
+  values = <<-EOT
+  manifests:
+         byo-manifest:
+           contents: |
+    # Add manifests here
+             apiVersion: v1
+               kind: Namespace
+                 metadata:
+                   labels:
+                     app: wordpress
+                     app2: wordpress2
+                     name: wordpress
+      EOT
+     }
+  }
+*/
+  
+  # Uncomment to use backup policy  
+/*
   backup_policy {
     schedule                  = "0 0 * * SUN"
     backup_location_id        = data.spectrocloud_backup_storage_location.bsl.id
@@ -62,6 +63,7 @@ resource "spectrocloud_cluster_aws" "cluster" {
   }
 */
 
+# Uncomment to use scan policy
 /*
   scan_policy {
     configuration_scan_schedule = "0 0 * * SUN"
@@ -75,7 +77,7 @@ resource "spectrocloud_cluster_aws" "cluster" {
     control_plane_as_worker = true
     name                    = "master-pool"
     count                   = 1
-    instance_type           = "t3.large"
+    instance_type           = var.master_instance_type
     disk_size_gb            = 62
     azs                     = var.region_azs
   }
@@ -83,7 +85,7 @@ resource "spectrocloud_cluster_aws" "cluster" {
   machine_pool {
     name          = "worker-basic"
     count         = 1
-    instance_type = "t3.large"
+    instance_type = var.worker_instance_type
     azs           = var.region_azs
   }
 
