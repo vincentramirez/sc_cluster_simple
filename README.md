@@ -9,6 +9,9 @@
 - Clone this repo
 - cd sc_cluster_simple
 - cp terraform.tfvars_example ./terraform.tfvars
-- vi terraform.tfvars, i (for insert mode) <enter your unique values>, esc :wq! (to save) 
+- Type `vi terraform.tfvars`, `i` (for insert mode) <enter your unique values>, `esc :wq! enter` (to save) 
 - *It is not a safe practice to put passwords or secrets in a .tfvars file
-- For the sc_username & sc_password use `export TF_VAR_sc_username` `export TF_VAR_sc_password`
+- For the sc_username & sc_password use `export TF_VAR_sc_username='yourUserName` `export TF_VAR_sc_password=yourPassword`
+- Test your config with `terraform plan` 
+- Execute your provisioning with `terraform apply` 
+- A successful apply should result in 
