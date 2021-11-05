@@ -1,8 +1,8 @@
 # Spectro Cloud credentials
 sc_host         = "api.spectrocloud.com" 
-#sc_username     = "{enter Spectro Cloud username}"     #e.g: user1@abc.com
-#sc_password     = "{enter Spectro Cloud password}"     #e.g: supereSecure1!
-sc_project_name = "Default" #e.g.: yourProjectName
+#sc_username     = "use_TF_VAR_ or anything besides hardcoding"     
+#sc_password     = "use_TF_VAR_ or anything besides hardcoding"    
+sc_project_name = "Default or yourProjectName" 
 
 
 cluster_cloud_account_name   = "nameOfExistingCloudAccount"
@@ -14,6 +14,6 @@ region_azs                   = [
   "us-east-1a",
   "us-east-1b",                             
 ]
-master_insance_type          = "awsEc2InstanceType, ex: t3.large"
-worker_instance_type         = "awsEc2InstanceType, ex: t3.xlarge"
+master_insance_type          = "awsEc2InstanceType, ex t3.large"
+worker_instance_type         = "awsEc2InstanceType, ex t3.xlarge"
 
