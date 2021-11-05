@@ -11,7 +11,7 @@
 - `cp terraform.tfvars_example ./terraform.tfvars`
 - Type `vi terraform.tfvars`, `i` (for insert mode) <enter your unique values>, `esc :wq! enter` (to save) 
 - *It is not a safe practice to put passwords or secrets in a .tfvars file
-- For the sc_username & sc_password use 
+- For the sc_username & sc_password set environment variables on your Terraform execution system
   - `export TF_VAR_sc_username="yourUserName"` 
   - `export TF_VAR_sc_password="yourPassword"`
 - Test your config with `terraform plan` 
