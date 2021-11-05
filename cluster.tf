@@ -32,24 +32,24 @@ resource "spectrocloud_cluster_aws" "cluster" {
   # To override or specify values for a cluster:
 /*
   pack {
-  name   = "spectro-byo-manifest"
-  tag    = "1.0.x"
-  values = <<-EOT
-  manifests:
-         byo-manifest:
-           contents: |
-    # Add manifests here
-             apiVersion: v1
-               kind: Namespace
-                 metadata:
-                   labels:
-                     app: wordpress
-                     app2: wordpress2
-                     name: wordpress
+    name   = "spectro-byo-manifest"
+    tag    = "1.0.x"
+    values = <<-EOT
+      manifests:
+        byo-manifest:
+          contents: |
+            # Add manifests here
+            apiVersion: v1
+            kind: Namespace
+            metadata:
+              labels:
+                app: wordpress
+                app2: wordpress2
+              name: wordpress
       EOT
-     }
+     } */
+  
   }
-*/
   
   # Uncomment to use backup policy  
 /*
