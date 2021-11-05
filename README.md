@@ -14,4 +14,13 @@
 - For the sc_username & sc_password use `export TF_VAR_sc_username='yourUserName` `export TF_VAR_sc_password=yourPassword`
 - Test your config with `terraform plan` 
 - Execute your provisioning with `terraform apply` 
-- A successful apply should result in 
+- A successful apply should result in the creation of a kubeconfig file in your working directory
+- *BE CAREFULL with your secrets!!!  The kubeconfig, .tfvars, and terraform.tfstate file should not be commited to VCS 
+  
+### Known issues
+- At this time I have expeirenced an issue using `terraform destroy` to delete a cluster.  This appears related to the fact that my cluster does not have a backup policy defined.  I have communicated this behavior to the Spectro Cloud team.  
+  
+### Clean up
+- `terraform destroy` *see known issues above
+- If you are not able to use Terraform to destroy the cluster, you can use the Palette UI
+- In your Terraform working directory remove the terraform.tfstate, terraform.tfstate.backup (if present), & kubeconfig_<yourCluster>
