@@ -22,6 +22,11 @@
 ### Known issues
 - At this time the Spectro Cloud Terraform provider does not support the Apple Silicone M1 arm64 platform.    
 - At this time I have expeirenced an issue using `terraform destroy` to delete a cluster.  This appears related to the fact that my cluster does not have a backup policy defined.  I have communicated this behavior to the Spectro Cloud team.  
+
+## Version of Terraform and provider used 
+- Terraform v1.0.10 on linux_amd64
+- provider registry.terraform.io/hashicorp/local v2.1.0
+- provider registry.terraform.io/spectrocloud/spectrocloud v0.5.12
   
 ### Clean up
 - `terraform destroy` *see known issues above
