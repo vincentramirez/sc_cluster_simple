@@ -20,6 +20,7 @@
 - *BE CAREFULL with your secrets!!!  The kubeconfig, .tfvars, and terraform.tfstate file should not be commited to VCS 
   
 ### Known issues
+- At this time the Spectro Cloud Terraform provider does not support the Apple Silicone M1 arm64 platform.    
 - At this time I have expeirenced an issue using `terraform destroy` to delete a cluster.  This appears related to the fact that my cluster does not have a backup policy defined.  I have communicated this behavior to the Spectro Cloud team.  
   
 ### Clean up
