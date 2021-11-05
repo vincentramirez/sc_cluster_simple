@@ -17,7 +17,7 @@
 - Test your config with `terraform plan` 
 - Execute your provisioning with `terraform apply` 
 - A successful apply should result in the creation of a kubeconfig file in your working directory
-- *BE CAREFULL with your secrets!!!  The kubeconfig, .tfvars, and terraform.tfstate file should not be commited to VCS 
+- *BE CAREFULL with your secrets!!!  The kubeconfig, terraform.tfvars, terraform.tfstate & terraform.tfstate.backup files should never be commited to a public version control system. 
   
 ### Known issues
 - At this time the Spectro Cloud Terraform provider does not support the Apple Silicone M1 arm64 platform.    
