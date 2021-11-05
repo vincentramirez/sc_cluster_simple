@@ -9,3 +9,5 @@ variable "cluster_name" {}
 variable "ssh_key_name" {}
 variable "region" {}
 variable "region_azs" {}
+variable "master_instance_type" {}
+variable "worker_instance_type" {}
