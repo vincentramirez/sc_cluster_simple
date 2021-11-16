@@ -16,4 +16,4 @@ region_azs                   = [
 ]
 master_instance_type          = "awsEc2InstanceType, ex t3.large"
 worker_instance_type         = "awsEc2InstanceType, ex t3.xlarge"
-
+backup_storage_location_name = "yourBSL"
