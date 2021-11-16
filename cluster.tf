@@ -78,6 +78,7 @@ resource "spectrocloud_cluster_aws" "cluster" {
     name                    = "master-pool"
     count                   = 1
     instance_type           = var.master_instance_type
+    capacity_type           = "on-demand"
     disk_size_gb            = 62
     azs                     = var.region_azs
   }
@@ -86,6 +87,7 @@ resource "spectrocloud_cluster_aws" "cluster" {
     name          = "worker-basic"
     count         = 1
     instance_type = var.worker_instance_type
+    capacity_type = "on-demand"
     azs           = var.region_azs
   }
 
