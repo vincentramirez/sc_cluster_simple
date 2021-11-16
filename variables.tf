@@ -1,6 +1,9 @@
 variable "sc_host" {}
 variable "sc_username" {}
-variable "sc_password" {}
+variable "sc_password" {
+  type       = string
+  sensitive  = true
+}
 variable "sc_project_name" {}
 
 variable "cluster_cloud_account_name" {}
