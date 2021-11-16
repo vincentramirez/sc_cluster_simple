@@ -11,3 +11,4 @@ variable "region" {}
 variable "region_azs" {}
 variable "master_instance_type" {}
 variable "worker_instance_type" {}
+variable "backup_storage_location_name" {}
